@@ -1,18 +1,16 @@
-import java.util.ArrayList;
+import java.util.*;
 
 public class MyArr {
-        public static void main(String[] args) {
-            ArrayList<String> arrayList = new ArrayList<>();
-            arrayList.add("A");
-            arrayList.add("B");
-            arrayList.add("C");
-            arrayList.add("D");
-            arrayList.add("E");
-            arrayList.add(1, "А0");
-            System.out.println(arrayList);
-            arrayList.remove("E");
-            arrayList.remove(2);
-            System.out.println(arrayList);
+
+    public static void main(String[] args) {
+        String[] fruits = {"Яблоко", "Груша", "Апельсин", "Мандарин",
+                "Груша", "Манго", "Яблоко", "Яблоко", "Апельсин"};
+        Map<String,Integer> myArr = new HashMap<>();
+        for(String o: fruits){
+            myArr.put(o, myArr.getOrDefault(o,0)+1);
         }
 
+        System.out.println(myArr);
+
+    }
 }

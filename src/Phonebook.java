@@ -8,12 +8,12 @@ public class Phonebook {
     String  name;
     String number;
 
+/*
+    protected Phonebook() {
 
-    public Phonebook() {
-        this.ph = ph;
-    }
+    }*/
 
-    public void add(String name, String number){
+    protected void add(String name, String number){
         List<String>phones = ph.get(name);
         if(phones == null){
             phones = new ArrayList<String>();
@@ -23,7 +23,7 @@ public class Phonebook {
 
     }
 
-    public List<String> get(String name){
+    protected List<String> get(String name){
         System.out.println("Результат поиска по запросу: " + name );
        return ph.get(name);
     }

@@ -12,11 +12,10 @@ public class Pass {
     }
 
     public static void main(String[] args) {
-        String pass = "%$%$%$a";
-       /* Pattern pattern = Pattern.compile("[0-9]");
-        Matcher matcher = pattern.matcher(pass);*/
-        System.out.println(pass.matches("\\W+"));
+        Pattern pattern = Pattern.compile("^.{8,20}(?=.*[0-9])$");
 
+        Matcher matcher = pattern.matcher("as22dddd");
+        System.out.println(matcher.find());
     }
 }
 

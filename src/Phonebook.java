@@ -5,9 +5,9 @@ import java.util.Map;
 
 public class Phonebook {
     Map<String, List<String>> ph = new HashMap<>();
-    String  name;
+    /*String  name;
     String number;
-
+*/
 /*
     protected Phonebook() {
 

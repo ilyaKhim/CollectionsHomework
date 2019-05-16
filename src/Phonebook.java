@@ -1,10 +1,7 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Phonebook {
-    Map<String, List<String>> ph = new HashMap<>();
+    Map<String, Set<String>> ph = new HashMap<>();
     /*String  name;
     String number;
 */
@@ -14,17 +11,19 @@ public class Phonebook {
     }*/
 
     protected void add(String name, String number){
-        List<String>phones = ph.get(name);
+        Set<String> phones = ph.get(name);
         if(phones == null){
-            phones = new ArrayList<String>();
+            phones = new HashSet<>();
             ph.put(name, phones);
         }
         phones.add(number);
 
     }
 
-    protected List<String> get(String name){
+    protected Set<String> get(String name){
         System.out.println("Результат поиска по запросу: " + name );
        return ph.get(name);
     }
 }
+
+

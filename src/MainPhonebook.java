@@ -10,7 +10,7 @@ public class MainPhonebook {
 
 
 
-        System.out.println(ph.get("Иванов"));
+        System.out.println(ph.get("Петров"));
     }
 
 }
